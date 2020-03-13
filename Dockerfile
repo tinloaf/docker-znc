@@ -64,6 +64,12 @@ RUN \
  tar xf \
  /tmp/znc-palaver.tar.gz -C \
         /tmp/znc/modules --strip-components=1 && \
+ curl -o \
+ /tmp/znc-ignore.tar.gz -L \
+        https://github.com/moshee/modignore/archive/master.tar.gz && \
+ tar xf \
+ /tmp/znc-ignore.tar.gz -C \
+        /tmp/znc/modules --strip-components=1 && \
  cd /tmp/znc && \
  export CFLAGS="$CFLAGS -D_GNU_SOURCE" && \
  ./configure \
